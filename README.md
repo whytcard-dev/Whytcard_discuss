@@ -42,22 +42,114 @@
 ## 📋 Roadmap
 
 Ce projet est en développement actif. Voici les principales étapes prévues:
+## 🎯 **INFRASTRUCTURE & ARCHITECTURE**
 
-### Phase 1 - Foundation
-- [x] Architecture de base
-- [x] Interface utilisateur principale
-- [x] Scraping simple de pages web
+### Architecture de Base
+- **Structure modulaire** : WhytCard_AI_Manager avec séparation claire des responsabilités
+- **Backend FastAPI** : API moderne avec endpoints optimisés
+- **Launcher intelligent** : Démarrage automatisé avec WhytCard_AI_Manager.bat
+- **Documentation complète** : Architecture, guides techniques et bonnes pratiques
 
-### Phase 2 - Core Features
-- [x] Gestion complète des datasets
-- [x] Support des modèles IA de base
-- [x] Visualisation des données
+### Environnement Technologique
+- **Python Environment** : Support Python 3.8-3.11 avec gestion des dépendances
+- **Flutter Desktop** : Interface utilisateur cross-platform moderne
+- **Containerisation Docker** : PostgreSQL, Redis, MinIO pour la scalabilité
+- **Configuration Git** : Gestion de versions professionnelle
 
-### Phase 3 - Advanced
-- [ ] Scraping IA avancé
-- [ ] Fine-tuning optimisé
-- [ ] Marketplace de modèles
+### Infrastructure Serveurs
+- **PostgreSQL** : Base de données relationnelle haute performance
+- **Redis** : Cache distribué et gestion des sessions
+- **MinIO** : Stockage d'objets compatible S3 pour datasets et modèles
+- **Nginx** : Reverse proxy pour la production
 
+---
+
+## 🔥 **MOTEUR D'IA ET FINE-TUNING**
+
+### Entraînement IA Avancé
+- **Trainer LoRA/QLoRA** : Techniques d'adaptation de modèles avec quantization 4-bit
+- **Support Multi-Modèles** : Llama, Mistral, Qwen et tous modèles HuggingFace
+- **Gestion Automatique** : Téléchargement, conversion et optimisation des modèles
+- **Monitoring Temps Réel** : Suivi des métriques (loss, perplexity, progression)
+
+### Processeur de Datasets
+- **Conversion Intelligente** : Transformation automatique scraping vers format d'entraînement
+- **Validation Automatique** : Nettoyage et vérification de la qualité des données
+- **Augmentation de Données** : Génération synthétique pour enrichir les datasets
+- **Formats Multiples** : Support JSONL, CSV, Parquet pour maximum de compatibilité
+
+### API d'Entraînement
+- **Endpoints Complets** : Démarrage, suivi, arrêt et gestion des entraînements
+- **Gestion des Modèles** : Liste, téléchargement et versioning automatique
+- **Test d'Inférence** : Validation immédiate des modèles entraînés
+- **Configuration Avancée** : Paramètres optimisés pour chaque type de modèle
+
+---
+
+## 🕷️ **MOTEUR DE SCRAPING INTELLIGENT**
+
+### Scraping Multi-Stratégies
+- **Scraper Basique** : Requests + BeautifulSoup pour sites statiques
+- **Scraper JavaScript** : Playwright pour applications web modernes
+- **Contournement Anti-Bot** : Bypass Cloudflare et protections avancées
+- **Orchestrateur Intelligent** : Sélection automatique de la meilleure stratégie
+
+### Technologies Anti-Détection
+- **Rotation de Proxies** : Réseau de proxies résidentiels pour anonymat
+- **Empreintes Uniques** : Browser fingerprinting et rotation User-Agent
+- **Patterns Naturels** : Simulation de comportement humain authentique
+- **Résolution CAPTCHA** : Intégration services 2captcha et solveurs ML locaux
+
+### Extraction Intelligente
+- **LLM Extraction** : Utilisation d'IA locale pour extraction sémantique
+- **Vision AI** : OCR et analyse d'images pour contenu visuel
+- **Audio/Vidéo** : Transcription Whisper et extraction de métadonnées
+- **Classification Automatique** : Reconnaissance d'entités et catégorisation
+
+### Scraping Distribué
+- **Architecture Ray** : Distribution sur plusieurs machines
+- **Load Balancing** : Répartition intelligente de la charge
+- **Tolérance aux Pannes** : Récupération automatique et retry logic
+- **Monitoring Avancé** : Métriques de performance en temps réel
+
+---
+
+## 📊 **GESTION AVANCÉE DES DATASETS**
+
+### Génération et Formats
+- **Multi-Formats** : Support JSONL, CSV, JSON pour tous types de projets
+- **Types de Tâches** : text_generation, Q&A, classification et plus
+- **Export Optimisé** : Téléchargement formaté selon les besoins
+
+### Données Synthétiques
+- **Génération LLM** : Création de données d'entraînement avec IA
+- **Templates Avancés** : Génération basée sur modèles personnalisables
+- **Scoring Qualité** : Évaluation automatique de la pertinence des données
+- **Augmentation Intelligente** : Enrichissement contextuel des datasets
+
+### Contrôle Qualité
+- **Détection Doublons** : Identification et suppression automatique
+- **Analyse de Biais** : Détection et correction des biais dans les données
+- **Filtrage Contenu** : Nettoyage automatique selon critères définis
+- **Validation Statistique** : Métriques de qualité et cohérence
+
+### Gestion Mémoire et Performance
+- **Streaming Datasets** : Traitement sans limite de mémoire
+- **Chargement Incrémental** : Optimisation pour gros volumes
+- **Évaluation Paresseuse** : Traitement à la demande
+- **Processing par Batch** : Optimisation des performances
+
+### Analytics et Exploration
+- **Explorateur de Datasets** : Interface intuitive pour navigation
+- **Statistiques Avancées** : Analyse descriptive et distribution
+- **Visualiseur d'Échantillons** : Prévisualisation des données
+- **Métriques Qualité** : Tableaux de bord de performance
+
+### Versioning et Collaboration
+- **Contrôle de Versions** : Intégration DVC pour suivi des changements
+- **Gestion des Branches** : Développement parallèle de datasets
+- **Rollback Intelligent** : Retour aux versions précédentes
+- **Collaboration Équipe** : Partage et synchronisation des datasets
 ## 💬 Discussions & Contributions
 
 Ce repository est dédié aux discussions, documentation et ressources publiques concernant WhytCard AI Manager.
