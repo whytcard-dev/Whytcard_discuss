@@ -1,9 +1,5 @@
 # 🚀 WhytCard AI Manager
 
-<div align="center">
-  
-![WhytCard AI Manager Logo](assets/images/logo.png)
-
 ### 🤖 Démocratiser l'IA pour tous
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge&color=4A90E2)](https://github.com/whytcard-dev/Discuss)
