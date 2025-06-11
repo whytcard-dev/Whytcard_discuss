@@ -45,13 +45,13 @@ Ce projet est en développement actif. Voici les principales étapes prévues:
 
 ### Phase 1 - Foundation
 - [x] Architecture de base
-- [ ] Interface utilisateur principale
-- [ ] Scraping simple de pages web
+- [x] Interface utilisateur principale
+- [x] Scraping simple de pages web
 
 ### Phase 2 - Core Features
-- [ ] Gestion complète des datasets
-- [ ] Support des modèles IA de base
-- [ ] Visualisation des données
+- [x] Gestion complète des datasets
+- [x] Support des modèles IA de base
+- [x] Visualisation des données
 
 ### Phase 3 - Advanced
 - [ ] Scraping IA avancé
