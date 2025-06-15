@@ -1,51 +1,117 @@
-# Guide de contribution
+# Guide de Contribution pour WhytCard Discuss
 
-Merci de votre intérêt pour contribuer à WhytCard Discuss! Ce document fournit des directives pour contribuer à ce projet.
+Nous sommes ravis que vous souhaitiez contribuer à WhytCard Discuss ! Votre aide est précieuse pour améliorer la documentation et enrichir la communauté autour du projet WhytCard.
 
-## Comment contribuer
+Ce guide vous aidera à comprendre comment vous pouvez participer.
 
-### Signaler des bugs
+## 👋 Comment Contribuer ?
 
-1. Vérifiez d'abord si le bug n'a pas déjà été signalé en recherchant dans les [issues](https://github.com/whytcard-dev/Whytcard_discuss/issues)
-2. Si ce n'est pas le cas, créez une nouvelle issue en utilisant le [modèle de rapport de bug](.github/ISSUE_TEMPLATE/bug_report.md)
-3. Incluez autant de détails que possible pour nous aider à reproduire et résoudre le problème
+Il existe de nombreuses façons de contribuer, notamment :
 
-### Suggérer des améliorations
+*   Signaler des erreurs ou des imprécisions dans la documentation.
+*   Proposer des améliorations pour le contenu existant.
+*   Suggérer de nouveaux sujets de documentation ou de nouveaux standards.
+*   Participer aux discussions et aider les autres membres de la communauté.
+*   Améliorer les scripts de traduction ou les workflows.
 
-1. Vérifiez d'abord si la suggestion n'a pas déjà été faite en recherchant dans les [issues](https://github.com/whytcard-dev/Whytcard_discuss/issues)
-2. Si ce n'est pas le cas, créez une nouvelle issue en utilisant le [modèle de demande de fonctionnalité](.github/ISSUE_TEMPLATE/feature_request.md)
-3. Décrivez clairement votre suggestion et expliquez pourquoi elle serait utile
+### 🐛 Signaler des Bugs ou des Erreurs
 
-### Contribuer à la documentation
+Si vous trouvez une erreur dans la documentation, une traduction incorrecte, un lien brisé, ou tout autre problème :
 
-1. Vous pouvez contribuer à la documentation en ajoutant ou en modifiant des fichiers dans le dossier `/EN`
-2. Les traductions seront générées automatiquement à partir des fichiers sources en anglais
-3. Assurez-vous que vos modifications respectent le style et la structure existants
+1.  **Recherchez d'abord** dans les [issues existantes](https://github.com/whytcard-dev/discuss/issues) pour voir si le problème n'a pas déjà été signalé.
+2.  Si ce n'est pas le cas, ouvrez une **nouvelle issue** en utilisant le template [Rapport de bug](/.github/ISSUE_TEMPLATE/bug_report.md).
+3.  Fournissez un maximum de détails :
+    *   URL de la page concernée ou chemin du fichier.
+    *   Description claire du problème.
+    *   Suggestions de correction si vous en avez.
 
-### Soumettre des modifications
+### ✨ Proposer des Améliorations ou des Nouvelles Fonctionnalités
 
-1. Forkez le dépôt
-2. Créez une nouvelle branche (`git checkout -b feature/ma-fonctionnalite`)
-3. Effectuez vos modifications
-4. Committez vos changements (`git commit -m 'Ajout de ma fonctionnalité'`)
-5. Poussez vers la branche (`git push origin feature/ma-fonctionnalite`)
-6. Ouvrez une Pull Request
+Pour suggérer une amélioration du contenu existant, un nouveau standard à documenter, ou toute autre idée :
 
-## Style de code
+1.  **Recherchez** dans les [issues existantes](https://github.com/whytcard-dev/discuss/issues) et les [Discussions](https://github.com/whytcard-dev/discuss/discussions) pour voir si votre idée n'a pas déjà été proposée.
+2.  Si ce n'est pas le cas, ouvrez une **nouvelle issue** en utilisant le template [Demande de fonctionnalité](/.github/ISSUE_TEMPLATE/feature_request.md) ou démarrez une [Discussion](https://github.com/whytcard-dev/discuss/discussions) pour en débattre.
+3.  Expliquez clairement votre suggestion et les bénéfices attendus.
 
-- Suivez le style de code existant
-- Commentez votre code lorsque nécessaire
-- Écrivez des messages de commit clairs et descriptifs
+### 📝 Contribuer directement à la Documentation
 
-## Processus de révision
+Les contributions directes à la documentation se font principalement sur les fichiers sources en **anglais**, situés dans le répertoire `/EN/`.
 
-1. Les mainteneurs examineront votre Pull Request dès que possible
-2. Des modifications supplémentaires peuvent être demandées
-3. Une fois approuvée, votre Pull Request sera fusionnée
+**Important concernant les traductions :**
 
-## Ressources
+*   **Les traductions vers les autres langues sont générées automatiquement** à partir des fichiers du répertoire `/EN/`.
+*   **Ne modifiez PAS directement les fichiers dans les dossiers des langues traduites** (ex: `/FR/`, `/ES/`), car vos modifications seraient écrasées lors de la prochaine exécution du script de traduction.
+*   Si vous constatez une erreur de traduction, signalez-la via une issue ou proposez une amélioration du texte source en anglais qui pourrait mener à une meilleure traduction automatique.
 
-- [Documentation du projet](https://github.com/whytcard-dev/Whytcard_discuss/tree/main/EN)
-- [GitHub Discussions](https://github.com/whytcard-dev/Whytcard_discuss/discussions)
+#### Processus de modification de la documentation :
 
-Merci de contribuer à WhytCard Discuss! 
+1.  **Forkez** le dépôt `whytcard-dev/discuss` sur votre propre compte GitHub.
+2.  **Clonez** votre fork localement :
+    ```bash
+    git clone https://github.com/VOTRE_NOM_UTILISATEUR/discuss.git
+    cd discuss
+    ```
+3.  **Créez une nouvelle branche** pour vos modifications. Choisissez un nom descriptif (ex: `feature/amelioration-doc-accessibilite` ou `fix/correction-typo-readme-en`).
+    ```bash
+    git checkout -b NOM_DE_VOTRE_BRANCHE
+    ```
+4.  **Effectuez vos modifications** dans les fichiers du répertoire `/EN/`.
+    *   Assurez-vous de respecter le style et la structure existants.
+    *   Si vous ajoutez de nouveaux fichiers, pensez à la manière dont ils s'intègrent dans la structure globale.
+5.  **Committez vos changements.** Rédigez des messages de commit clairs et descriptifs (voir la section "Messages de Commit").
+    ```bash
+    git add CHEMIN_DU_FICHIER_MODIFIE
+    git commit -m "Décrivez clairement votre modification"
+    ```
+6.  **Poussez vos modifications** vers votre fork sur GitHub :
+    ```bash
+    git push origin NOM_DE_VOTRE_BRANCHE
+    ```
+7.  **Ouvrez une Pull Request (PR)** depuis votre branche sur votre fork vers la branche `main` du dépôt `whytcard-dev/discuss`.
+    *   Utilisez le template de Pull Request fourni.
+    *   Décrivez clairement les changements que vous proposez et pourquoi.
+    *   Liez votre PR à toute issue pertinente.
+
+### ✍️ Messages de Commit
+
+Nous suivons les [Conventional Commits](https://www.conventionalcommits.org/) pour nos messages de commit. Cela nous aide à maintenir un historique clair et facilite la génération de changelogs.
+
+Un message de commit typique ressemble à :
+
+```
+feat: Ajout d'une section sur les WebSockets dans la doc architecture
+
+Description plus détaillée du changement si nécessaire.
+Explique le problème que ce commit résout.
+```
+
+*   **Types courants :** `feat` (nouvelle fonctionnalité), `fix` (correction de bug), `docs` (changements dans la documentation), `style` (formatage, etc.), `refactor`, `test`, `chore` (maintenance).
+*   Le résumé (première ligne) doit être concis (idéalement 50 caractères max).
+*   Utilisez l'impératif ("Ajout", "Correction" plutôt que "Ajouté", "Corrigé").
+
+## 🛠️ Standards de Code et de Style
+
+*   **Markdown :** Suivez le style Markdown existant dans les fichiers. Utilisez des linters Markdown si vous en avez pour assurer la cohérence.
+*   **Langue (pour les sources) :** La documentation source doit être rédigée en anglais clair et concis (dans le dossier `/EN/`).
+*   **Scripts (Node.js) :** Si vous contribuez aux scripts dans le dossier `/scripts/`, suivez les conventions JavaScript/Node.js établies dans ces fichiers.
+
+## 👁️ Processus de Révision des Pull Requests
+
+1.  Une fois votre Pull Request ouverte, un ou plusieurs mainteneurs du projet la réviseront.
+2.  Les workflows GitHub Actions (comme les linters ou les tests de build) doivent passer.
+3.  Des commentaires ou des demandes de modification pourront vous être faits. Nous encourageons une discussion constructive.
+4.  Une fois la PR approuvée et tous les tests passés, elle sera fusionnée dans la branche `main`.
+5.  Après la fusion dans `main`, le workflow d'autotraduction devrait se déclencher pour propager vos modifications (faites sur les fichiers anglais) aux autres langues.
+
+## 💬 Rejoindre la Communauté
+
+*   **Discussions GitHub :** [whytcard-dev/discuss/discussions](https://github.com/whytcard-dev/discuss/discussions)
+*   **(Optionnel : Ajoutez ici d'autres liens communautaires si vous en avez : Discord, Forum, etc.)**
+
+## ⚖️ Code de Conduite
+
+N'oubliez pas que toutes les interactions sur ce projet sont soumises à notre [Code de Conduite](/.github/CODE_OF_CONDUCT.md).
+
+---
+
+Merci encore pour votre volonté de contribuer à WhytCard Discuss ! 
