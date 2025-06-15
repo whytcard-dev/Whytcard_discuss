@@ -31,7 +31,7 @@ jobs:
       run: npm ci || npm install
       
     - name: Setup Google Cloud credentials
-      uses: google-github-actions/auth@v1
+      uses: google-github-actions/auth@v2
       with:
         credentials_json: ${{ secrets.GOOGLE_CREDENTIALS }}
       
