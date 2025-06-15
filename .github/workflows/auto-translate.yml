@@ -1,0 +1,50 @@
+name: Auto-Translate
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'EN/**/*.md'
+  workflow_dispatch:
+    inputs:
+      specific_file:
+        description: 'Specific file to translate (leave empty for all files)'
+        required: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci || npm install
+      
+    - name: Setup Google Cloud credentials
+      uses: google-github-actions/auth@v1
+      with:
+        credentials_json: ${{ secrets.GOOGLE_CREDENTIALS }}
+      
+    - name: Run translation
+      if: github.event.inputs.specific_file == ''
+      run: npm run translate
+      
+    - name: Run specific file translation
+      if: github.event.inputs.specific_file != ''
+      run: npm run translate-file -- ${{ github.event.inputs.specific_file }}
+      
+    - name: Commit translated files
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Auto-translate: Update translations"
+        file_pattern: "*/**.md" 

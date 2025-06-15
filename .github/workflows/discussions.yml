@@ -1,0 +1,33 @@
+name: Setup Discussions
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/discussions.yml'
+  workflow_dispatch:
+
+jobs:
+  setup-discussions:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Enable GitHub Discussions
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          try {
+            await github.rest.repos.updateRepoConfig({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              has_discussions: true
+            });
+            console.log('GitHub Discussions enabled successfully');
+          } catch (error) {
+            console.error('Error enabling GitHub Discussions:', error);
+            core.setFailed(error.message);
+          } 

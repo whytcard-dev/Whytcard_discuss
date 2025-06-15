@@ -1,0 +1,48 @@
+title: "Idée / Suggestion"
+labels: ["enhancement", "idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Partagez votre idée pour WhytCard
+        
+        Utilisez ce modèle pour proposer une idée ou une suggestion pour améliorer WhytCard.
+        
+  - type: textarea
+    id: idea
+    attributes:
+      label: Votre idée
+      description: Décrivez votre idée ou suggestion
+      placeholder: Soyez aussi détaillé que possible...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Pourquoi cette idée serait-elle bénéfique?
+      placeholder: Expliquez les avantages et l'impact potentiel de votre idée.
+    validations:
+      required: true
+      
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Mise en œuvre (optionnel)
+      description: Si vous avez des idées sur la façon de mettre en œuvre cette suggestion, partagez-les ici.
+      placeholder: Comment cette idée pourrait-elle être mise en œuvre?
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorité suggérée
+      description: Quelle priorité suggérez-vous pour cette idée?
+      options:
+        - Faible
+        - Moyenne
+        - Élevée
+    validations:
+      required: true 

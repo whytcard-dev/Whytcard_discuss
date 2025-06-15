@@ -1,0 +1,30 @@
+# Dépendances
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environnement
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Clés Google Cloud
+*.json
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Éditeurs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~ 

@@ -1,0 +1,41 @@
+title: "Question"
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Posez votre question sur WhytCard
+        
+        Utilisez ce modèle pour poser une question à la communauté.
+        
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Quelle est votre question?
+      placeholder: Soyez aussi précis que possible...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexte
+      description: Fournissez du contexte supplémentaire pour votre question
+      placeholder: Expliquez ce que vous essayez de faire, ce que vous avez déjà essayé, etc.
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domaine
+      description: À quel domaine votre question est-elle liée?
+      options:
+        - Installation / Configuration
+        - Utilisation
+        - Développement / Contribution
+        - Documentation
+        - Autre
+    validations:
+      required: true 

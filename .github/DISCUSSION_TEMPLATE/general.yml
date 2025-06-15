@@ -1,0 +1,31 @@
+title: "Discussion générale"
+labels: ["discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bienvenue dans les discussions de WhytCard!
+        
+        Utilisez ce modèle pour démarrer une conversation générale sur WhytCard.
+        
+  - type: textarea
+    id: topic
+    attributes:
+      label: Sujet de discussion
+      description: De quoi souhaitez-vous discuter?
+      placeholder: Partagez vos idées, questions ou commentaires...
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: category
+    attributes:
+      label: Catégorie
+      description: À quelle catégorie votre discussion appartient-elle?
+      options:
+        - Idées et suggestions
+        - Questions
+        - Retours d'expérience
+        - Autre
+    validations:
+      required: true 

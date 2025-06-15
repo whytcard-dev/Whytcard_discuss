@@ -1,2 +1,16 @@
-*.sh text eol=lf
-*.md text eol=lf
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Documentation
+*.md diff=markdown
+
+# Linguist language overrides
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+
+# Exclude files from GitHub language statistics
+scripts/* linguist-vendored=false
+*/README.md linguist-documentation=false
+.github/* linguist-documentation 
