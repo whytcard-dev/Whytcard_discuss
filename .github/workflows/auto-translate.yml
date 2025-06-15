@@ -44,7 +44,7 @@ jobs:
       run: npm run translate-file -- ${{ github.event.inputs.specific_file }}
       
     - name: Commit translated files
-      uses: stefanzweifel/git-auto-commit-action@v4
+      uses: stefanzweifel/git-auto-commit-action@v6
       with:
         commit_message: "Auto-translate: Update translations"
         file_pattern: "*/**.md" 
