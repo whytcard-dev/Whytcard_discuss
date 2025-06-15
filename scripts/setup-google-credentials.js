@@ -10,7 +10,7 @@
 // Configuration des variables d'environnement
 process.env.GOOGLE_APPLICATION_CREDENTIALS = "lucid-timing-462919-d9";
 process.env.GOOGLE_CLOUD_PROJECT = "lucid-timing-462919";
-process.env.GOOGLE_API_KEY = "AIzaSyCqo3BInTa0wxBfPM4wn5lvRaJGKglJOHo";
+process.env.GOOGLE_API_KEY = "AIzaSyBj4z4bLx9bYZJjVRcI3S9OSzFnd7HWzmk";
 
 console.log("Configuration des identifiants Google Cloud réussie :");
 console.log(`- Projet: ${process.env.GOOGLE_CLOUD_PROJECT}`);
@@ -42,4 +42,14 @@ try {
 } catch (error) {
   console.error("Erreur lors de l'initialisation du client de traduction:", error);
   console.error("\nVeuillez vérifier que le package @google-cloud/translate est installé.");
+}
+
+try {
+  const translate = new Translate({
+    key: process.env.GOOGLE_API_KEY,
+    projectId: process.env.GOOGLE_CLOUD_PROJECT
+  });
+  console.log("Instance Translate créée avec succès.");
+} catch (e) {
+  console.error("Erreur lors de la création de l'instance Translate:", e);
 } 
